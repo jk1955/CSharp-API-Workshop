@@ -7,6 +7,7 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
     options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
 });
+
 builder.Services.AddDbContext<VideoGameContext>();
 builder.Services.AddCors(options => options.AddPolicy("MyPolicy", builder =>
 {
